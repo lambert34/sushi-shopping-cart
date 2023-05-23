@@ -8,7 +8,11 @@ console.log(counter);
 
 btnMinus.addEventListener('click', function() {
     console.log('Minus clk');
+
+if ( parseInt(counter.innerText) > 1 ) {
     counter.innerText = --counter.innerText;
+}
+
 });
 
 btnPlus.addEventListener('click', function() {
