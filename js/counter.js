@@ -1,22 +1,29 @@
-const btnMinus = document.querySelector('[data-action="minus"]');
+window.addEventListener('click', function (event) {
 
-const btnPlus = document.querySelector('[data-action="plus"]');
+    console.log(event.target)
 
-const counter = document.querySelector('[data-counter]');
+if (event.target.dataset.action === 'plus') {
 
-console.log(counter);
+    const counterWrapper = event.target.closest('.counter-wrapper'); 
+    console.log(counterWrapper);
 
-btnMinus.addEventListener('click', function() {
-    console.log('Minus clk');
+    const counter = counterWrapper.querySelector('[data-counter]');
+    console.log(counter);
 
-if ( parseInt(counter.innerText) > 1 ) {
-    counter.innerText = --counter.innerText;
-}
-
-});
-
-btnPlus.addEventListener('click', function() {
-    console.log('Plus clk');
     counter.innerText = ++counter.innerText;
-});
+};
 
+if (event.target.dataset.action === 'minus') {
+    console.log('-')
+
+    const counterWrapper = event.target.closest('.counter-wrapper'); 
+    console.log(counterWrapper);
+
+    const counter = counterWrapper.querySelector('[data-counter]');
+    console.log(counter);
+
+    if (parseInt(counter.innerText) > 1) {
+        counter.innerText = --counter.innerText;
+    }
+};
+});
