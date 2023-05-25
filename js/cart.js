@@ -53,5 +53,8 @@ window.addEventListener('click', function (event) {
 
 cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
         }
+
+        // данный скрипт сбрасывает счетчик товара на единицу
+        card.querySelector('[data-counter]').innerText = '1'
     }
 })
