@@ -55,6 +55,9 @@ cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
         }
 
         // данный скрипт сбрасывает счетчик товара на единицу
-        card.querySelector('[data-counter]').innerText = '1'
+        card.querySelector('[data-counter]').innerText = '1';
+
+        // Отображение статуса корзины
+        toggleCartStatus();
     }
 })

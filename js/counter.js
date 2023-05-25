@@ -26,6 +26,9 @@ if (event.target.dataset.action === 'minus') {
         counter.innerText = --counter.innerText;
     } else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
         event.target.closest('.cart-item').remove();
+
+           // Отображение статуса корзины
+        toggleCartStatus();
     }
 };
 });
