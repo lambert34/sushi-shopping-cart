@@ -1,10 +1,16 @@
-function toggleCartStatus () {
+function toggleCartStatus() {
+
     const cartWrapper = document.querySelector('.cart-wrapper');
     const cartEmptyBadge = document.querySelector('[data-cart-empty]');
 
     if (cartWrapper.children.length > 0) {
-    cartEmptyBadge.classList.add('none')
+        console.log('FULL');
+        cartEmptyBadge.classList.add('none');
     } else {
-        cartEmptyBadge.classList.remove('none')
+        console.log('EMPTY');
+        cartEmptyBadge.classList.remove('none');
+    }
+
 }
-}
+
+// 1.45.54
